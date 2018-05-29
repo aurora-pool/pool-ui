@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import Home from './pages/home/Home.js'
-import './App.css';
+import './Home.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Home/>
+      <div className="Home">
+        Aurora Pool
       </div>
     );
   }
