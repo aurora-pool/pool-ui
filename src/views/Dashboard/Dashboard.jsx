@@ -165,7 +165,7 @@ class Dashboard extends React.Component {
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
               headerColor="orange"
-              cardTitle="Employees Stats"
+              cardTitle="TOP miners"
               cardSubtitle="New employees on 15th September, 2016"
               content={
                 <Table
@@ -182,6 +182,7 @@ class Dashboard extends React.Component {
             />
           </ItemGrid>
         </Grid>
+        <h3>Created with &hearts;  &hearts; by @vaot & @davidmoradi.</h3>
       </div>
     );
   }
