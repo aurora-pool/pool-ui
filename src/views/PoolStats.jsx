@@ -33,7 +33,7 @@ import {
 
 import dashboardStyle from "assets/jss/material-dashboard-react/dashboardStyle";
 
-class Dashboard extends React.Component {
+class PoolStats extends React.Component {
   state = {
     value: 0
   };
@@ -182,14 +182,13 @@ class Dashboard extends React.Component {
             />
           </ItemGrid>
         </Grid>
-        <h3>Created with &hearts;  &hearts; by @vaot & @davidmoradi.</h3>
       </div>
     );
   }
 }
 
-Dashboard.propTypes = {
+PoolStats.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(dashboardStyle)(Dashboard);
+export default withStyles(dashboardStyle)(PoolStats);

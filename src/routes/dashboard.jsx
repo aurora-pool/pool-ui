@@ -1,13 +1,21 @@
-import DashboardPage from "views/Dashboard/Dashboard.jsx";
+import PoolStats from "views/PoolStats.jsx";
+import GlobalStats from "views/GlobalStats.jsx";
 import { Dashboard } from "@material-ui/icons";
 
 const dashboardRoutes = [
   {
     path: "/dashboard",
-    sidebarName: "Dashboard",
+    sidebarName: "Pool Stats",
     navbarName: "",
     icon: Dashboard,
-    component: DashboardPage
+    component: PoolStats
+  },
+  {
+    path: "/global",
+    sidebarName: "Global Stats",
+    navbarName: "",
+    icon: Dashboard,
+    component: GlobalStats
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];

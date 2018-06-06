@@ -33,6 +33,7 @@ class App extends React.Component {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
   getRoute() {
+    debugger
     return this.props.location.pathname !== "/maps";
   }
   componentDidMount() {

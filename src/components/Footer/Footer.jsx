@@ -36,6 +36,9 @@ function Footer({ ...props }) {
         <p className={classes.right}>
           <span>
             &copy; {1900 + new Date().getYear()}{" "}
+            <a href="https://www.urorapool.io" className={classes.a}>
+              Aurora Pool
+            </a>, made with ❤️ for a better mining experience
           </span>
         </p>
       </div>
