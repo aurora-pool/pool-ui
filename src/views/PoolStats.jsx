@@ -19,7 +19,6 @@ import { withStyles, Grid } from "material-ui";
 import {
   StatsCard,
   ChartCard,
-  TasksCard,
   RegularCard,
   Table,
   ItemGrid
@@ -92,7 +91,7 @@ class PoolStats extends React.Component {
           </ItemGrid>
         </Grid>
         <Grid container>
-          <ItemGrid xs={12} sm={12} md={4}>
+          <ItemGrid xs={12} sm={12} md={6}>
             <ChartCard
               chart={
                 <ChartistGraph
@@ -104,7 +103,7 @@ class PoolStats extends React.Component {
                 />
               }
               chartColor="green"
-              title="Daily Sales"
+              title="Daily Hashrate"
               text={
                 <span>
                   <span className={this.props.classes.successText}>
@@ -113,14 +112,14 @@ class PoolStats extends React.Component {
                     />{" "}
                     55%
                   </span>{" "}
-                  increase in today sales.
+                  increase in hashrate today.
                 </span>
               }
               statIcon={AccessTime}
               statText="updated 4 minutes ago"
             />
           </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={4}>
+          <ItemGrid xs={12} sm={12} md={6}>
             <ChartCard
               chart={
                 <ChartistGraph
@@ -133,49 +132,28 @@ class PoolStats extends React.Component {
                 />
               }
               chartColor="orange"
-              title="Email Subscriptions"
-              text="Last Campaign Performance"
+              title="Blocks Found"
+              text="per day"
               statIcon={AccessTime}
-              statText="campaign sent 2 days ago"
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={4}>
-            <ChartCard
-              chart={
-                <ChartistGraph
-                  className="ct-chart"
-                  data={completedTasksChart.data}
-                  type="Line"
-                  options={completedTasksChart.options}
-                  listener={completedTasksChart.animation}
-                />
-              }
-              chartColor="red"
-              title="Completed Tasks"
-              text="Last Campaign Performance"
-              statIcon={AccessTime}
-              statText="campaign sent 2 days ago"
+              statText="last block found 1 hour ago"
             />
           </ItemGrid>
         </Grid>
         <Grid container>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <TasksCard />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={6}>
+          <ItemGrid xs={12} sm={12} md={12}>
             <RegularCard
-              headerColor="orange"
+              headerColor="purple"
               cardTitle="TOP miners"
-              cardSubtitle="New employees on 15th September, 2016"
+              cardSubtitle="Miners are ranked based on their current hashrate"
               content={
                 <Table
                   tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Salary", "Country"]}
+                  tableHead={["Address", "Hashrate", "Payouts"]}
                   tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
+                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "1 mh/s", "140,000 NIM"],
+                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "540 kh/s", "140,000 NIM"],
+                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "178 kh/s", "120,000 NIM"],
+                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "39 kh/s", "10,000 NIM"]
                   ]}
                 />
               }

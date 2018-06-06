@@ -27,6 +27,11 @@ const footerStyle = {
     fontSize: "14px",
     float: "right!important"
   },
+  middle: {
+    display: "flex",
+    justifyContent: "center",
+    fontSize: "14px"
+  },
   footer: {
     bottom: "0",
     borderTop: "1px solid #e7e7e7",
