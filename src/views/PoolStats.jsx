@@ -34,7 +34,7 @@ import dashboardStyle from "assets/jss/material-dashboard-react/dashboardStyle";
 
 class PoolStats extends React.Component {
   state = {
-    stats = {
+    stats: {
       name: "",
       poolAddress: "",
       averageHashrate: 0,
