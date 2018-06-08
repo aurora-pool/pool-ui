@@ -12,7 +12,7 @@ import dashboardRoutes from "routes/dashboard.jsx";
 
 import appStyle from "assets/jss/material-dashboard-react/appStyle.jsx";
 
-import image from "assets/img/sidebar-2.jpg";
+import image from "assets/img/aurora.jpg";
 import logo from "assets/img/reactlogo.png";
 
 const switchRoutes = (
@@ -33,7 +33,6 @@ class App extends React.Component {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
   getRoute() {
-    debugger
     return this.props.location.pathname !== "/maps";
   }
   componentDidMount() {

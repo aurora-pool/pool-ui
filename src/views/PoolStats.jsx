@@ -43,6 +43,13 @@ class PoolStats extends React.Component {
   handleChangeIndex = index => {
     this.setState({ value: index });
   };
+
+  componentDidMount() {
+    fetch('https://www.aurorapool.io:8650/metrics').then((res) => {
+      console.log(res)
+    })
+  }
+
   render() {
     return (
       <div>
