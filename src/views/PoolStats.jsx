@@ -34,7 +34,22 @@ import dashboardStyle from "assets/jss/material-dashboard-react/dashboardStyle";
 
 class PoolStats extends React.Component {
   state = {
-    stats: null
+    stats = {
+      name: "",
+      poolAddress: "",
+      averageHashrate: 0,
+      clientCounts: {
+        unregistered: 0,
+        smart: 0,
+        nano: 0
+        },
+      poolFee: 0,
+      numBlocksMined: 0,
+      numIpsBanned: 0,
+      totalShareDifficulty: 0,
+      payoutConfirmations: 0,
+      autoPayOutLimit: 0
+    }
   };
 
   componentDidMount() {
