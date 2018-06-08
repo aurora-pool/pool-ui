@@ -34,19 +34,12 @@ import dashboardStyle from "assets/jss/material-dashboard-react/dashboardStyle";
 
 class PoolStats extends React.Component {
   state = {
-    value: 0
-  };
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
-
-  handleChangeIndex = index => {
-    this.setState({ value: index });
+    stats: null
   };
 
   componentDidMount() {
     fetch('https://www.aurorapool.io:8650/metrics').then((res) => {
-      console.log(res)
+      this.setState({stats: res})
     })
   }
 
@@ -59,8 +52,8 @@ class PoolStats extends React.Component {
               icon={NetworkCheck}
               iconColor="orange"
               title="Pool Hashrate"
-              description="375"
-              small="KH"
+              description={this.state.stats.averageHashrate}
+              small="H"
               statIcon={Warning}
               statIconColor="danger"
               statLink={{ text: "Get More Space...", href: "#pablo" }}
@@ -71,7 +64,7 @@ class PoolStats extends React.Component {
               icon={Dns}
               iconColor="green"
               title="Blocks Found"
-              description="648"
+              description={this.state.stats.numBlocksMined}
               statIcon={DateRange}
               statText="Last 24 Hours"
             />
@@ -81,7 +74,7 @@ class PoolStats extends React.Component {
               icon={Mood}
               iconColor="red"
               title="Miners"
-              description="75"
+              description={this.state.stats.totalClientCounts}
               statIcon={LocalOffer}
               statText="Tracked from Github"
             />
@@ -91,7 +84,7 @@ class PoolStats extends React.Component {
               icon={Devices}
               iconColor="blue"
               title="Devices"
-              description="+245"
+              description="¯\_(ツ)_/¯"
               statIcon={Update}
               statText="Just Updated"
             />
