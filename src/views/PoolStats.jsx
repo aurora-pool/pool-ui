@@ -38,6 +38,7 @@ class PoolStats extends React.Component {
       name: "",
       poolAddress: "",
       averageHashrate: 0,
+      totalClientCounts: 0,
       clientCounts: {
         unregistered: 0,
         smart: 0,
@@ -50,12 +51,18 @@ class PoolStats extends React.Component {
       payoutConfirmations: 0,
       autoPayOutLimit: 0
     }
-  };
+  }
 
-  componentDidMount() {
-    fetch('https://www.aurorapool.io:8650/metrics').then((res) => {
-      this.setState({stats: res})
-    })
+  setStateAsync(state) {
+    return new Promise((resolve) => {
+      this.setState(state, resolve)
+    });
+  }
+
+  async componentDidMount() {
+    const response = await fetch('https://www.aurorapool.io:8650/metrics')
+    const result = await response.json()
+    this.setStateAsync({ stats: result })
   }
 
   render() {
