@@ -60,9 +60,18 @@ class PoolStats extends React.Component {
   }
 
   async componentDidMount() {
-    const response = await fetch('https://www.aurorapool.io:8650/metrics')
-    const result = await response.json()
-    this.setStateAsync({ stats: result })
+    const url = 'wss://api.aurorapool.io/api/v1/ws';
+    const connection = new WebSocket(url);
+
+    connection.onmessage = function(msg){
+      console.log(JSON.parse(msg.data))
+
+      const message = JSON.parse(msg.data)
+
+      if (message['type'] == 'pool:stats') {
+        this.setStateAsync({ stats: message['payload'] })
+      }
+    }
   }
 
   render() {
