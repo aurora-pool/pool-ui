@@ -53,11 +53,11 @@ class PoolStats extends React.Component {
     }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     const url = 'wss://api.aurorapool.io/api/v1/ws';
     const connection = new WebSocket(url);
 
-    connection.onmessage = function(msg) {
+    connection.onmessage = (msg) => {
 
       const message = JSON.parse(msg.data)
       //TODO: remove this log
