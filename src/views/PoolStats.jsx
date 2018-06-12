@@ -53,23 +53,18 @@ class PoolStats extends React.Component {
     }
   }
 
-  setStateAsync(state) {
-    return new Promise((resolve) => {
-      this.setState(state, resolve)
-    });
-  }
-
   async componentDidMount() {
     const url = 'wss://api.aurorapool.io/api/v1/ws';
     const connection = new WebSocket(url);
 
-    connection.onmessage = function(msg){
-      console.log(JSON.parse(msg.data))
+    connection.onmessage = function(msg) {
 
       const message = JSON.parse(msg.data)
+      //TODO: remove this log
+      console.log(message)
 
       if (message['type'] == 'pool:stats') {
-        this.setStateAsync({ stats: message['payload'] })
+        this.setState({ stats: message['payload'] })
       }
     }
   }
