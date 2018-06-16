@@ -8,14 +8,16 @@ const dashboardRoutes = [
     sidebarName: "Pool Stats",
     navbarName: "",
     icon: Dashboard,
-    component: PoolStats
+    component: PoolStats,
+    statsType: "pool:stats"
   },
   {
     path: "/global",
     sidebarName: "Global Stats",
     navbarName: "",
     icon: Dashboard,
-    component: GlobalStats
+    component: GlobalStats,
+    statsType: "global:stats"
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];

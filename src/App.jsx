@@ -1,3 +1,4 @@
+import update from 'immutability-helper';
 import React from "react";
 import PropTypes from "prop-types";
 import { Switch, Route, Redirect } from "react-router-dom";
@@ -15,20 +16,15 @@ import appStyle from "assets/jss/material-dashboard-react/appStyle.jsx";
 import image from "assets/img/aurora.jpg";
 import logo from "assets/img/reactlogo.png";
 
-const switchRoutes = (
-  <Switch>
-    {dashboardRoutes.map((prop, key) => {
-      if (prop.redirect)
-        return <Redirect from={prop.path} to={prop.to} key={key} />;
-      return <Route path={prop.path} component={prop.component} key={key} />;
-    })}
-  </Switch>
-);
-
 class App extends React.Component {
   state = {
-    mobileOpen: false
+    mobileOpen: false,
+    stats: {
+      "global:stats": {},
+      "pool:stats": {}
+    }
   };
+
   handleDrawerToggle = () => {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
@@ -36,6 +32,23 @@ class App extends React.Component {
     return this.props.location.pathname !== "/maps";
   }
   componentDidMount() {
+    const url = 'wss://api.aurorapool.io/api/v1/ws';
+    const connection = new WebSocket(url);
+
+    connection.onmessage = (msg) => {
+
+      const message = JSON.parse(msg.data)
+
+      let updateAction = { stats: {} }
+
+      updateAction.stats[message['type']] = {
+        $set: message['payload']
+      }
+
+      let newState = update(this.state, updateAction)
+      this.setState(newState)
+    }
+
     if(navigator.platform.indexOf('Win') > -1){
       // eslint-disable-next-line
       const ps = new PerfectScrollbar(this.refs.mainPanel);
@@ -45,6 +58,23 @@ class App extends React.Component {
     this.refs.mainPanel.scrollTop = 0;
   }
   render() {
+    const switchRoutes = (
+      <Switch>
+        {dashboardRoutes.map((prop, key) => {
+          if (prop.redirect)
+            return <Redirect from={prop.path} to={prop.to} key={key} />;
+
+          const element = React.createElement(prop.component, {
+            key: key,
+            stats: this.state.stats[prop.statsType]
+          })
+
+          const routerRender = () => element
+          return <Route path={prop.path} key={key} render={routerRender} />;
+        })}
+      </Switch>
+    )
+
     const { classes, ...rest } = this.props;
     return (
       <div className={classes.wrapper}>

@@ -53,20 +53,8 @@ class PoolStats extends React.Component {
     }
   }
 
-  componentDidMount() {
-    const url = 'wss://api.aurorapool.io/api/v1/ws';
-    const connection = new WebSocket(url);
-
-    connection.onmessage = (msg) => {
-
-      const message = JSON.parse(msg.data)
-      //TODO: remove this log
-      console.log(message)
-
-      if (message['type'] == 'pool:stats') {
-        this.setState({ stats: message['payload'] })
-      }
-    }
+  constructor(props) {
+    super(props)
   }
 
   render() {
@@ -78,7 +66,7 @@ class PoolStats extends React.Component {
               icon={NetworkCheck}
               iconColor="orange"
               title="Pool Hashrate"
-              description={this.state.stats.averageHashrate}
+              description={this.props.stats.averageHashrate}
               small="H"
               statIcon={Warning}
               statIconColor="danger"
@@ -90,7 +78,7 @@ class PoolStats extends React.Component {
               icon={Dns}
               iconColor="green"
               title="Blocks Found"
-              description={this.state.stats.numBlocksMined}
+              description={this.props.stats.numBlocksMined}
               statIcon={DateRange}
               statText="Last 24 Hours"
             />
@@ -100,7 +88,7 @@ class PoolStats extends React.Component {
               icon={Mood}
               iconColor="red"
               title="Miners"
-              description={this.state.stats.totalClientCounts}
+              description={this.props.stats.totalClientCounts}
               statIcon={LocalOffer}
               statText="Tracked from Github"
             />
