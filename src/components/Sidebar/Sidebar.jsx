@@ -56,7 +56,7 @@ const Sidebar = ({ ...props }) => {
   );
   var brand = (
     <div className={classes.logo}>
-      <a href="https://google.com" className={classes.logoLink}>
+      <a href="https://www.aurorapool.io" className={classes.logoLink}>
         <div className={classes.logoImage}>
           <img src={logo} alt="logo" className={classes.img} />
         </div>

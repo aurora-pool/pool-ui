@@ -13,8 +13,7 @@ import dashboardRoutes from "routes/dashboard.jsx";
 
 import appStyle from "assets/jss/material-dashboard-react/appStyle.jsx";
 
-import image from "assets/img/aurora.jpg";
-import logo from "assets/img/reactlogo.png";
+import logo from "assets/img/logo@2x.png";
 
 class App extends React.Component {
   state = {
@@ -82,7 +81,7 @@ class App extends React.Component {
           routes={dashboardRoutes}
           logoText={"Aurora Pool"}
           logo={logo}
-          image={image}
+          image=""
           handleDrawerToggle={this.handleDrawerToggle}
           open={this.state.mobileOpen}
           color="blue"

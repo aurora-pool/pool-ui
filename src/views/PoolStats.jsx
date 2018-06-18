@@ -39,6 +39,7 @@ class PoolStats extends React.Component {
       poolAddress: "",
       averageHashrate: 0,
       totalClientCounts: 0,
+      minersCount: 0,
       clientCounts: {
         unregistered: 0,
         smart: 0,
@@ -88,7 +89,7 @@ class PoolStats extends React.Component {
               icon={Mood}
               iconColor="red"
               title="Miners"
-              description={this.props.stats.totalClientCounts}
+              description={this.props.stats.minersCount}
               statIcon={LocalOffer}
               statText="Tracked from Github"
             />
@@ -98,7 +99,7 @@ class PoolStats extends React.Component {
               icon={Devices}
               iconColor="blue"
               title="Devices"
-              description="¯\_(ツ)_/¯"
+              description={this.props.stats.totalClientCounts}
               statIcon={Update}
               statText="Just Updated"
             />
