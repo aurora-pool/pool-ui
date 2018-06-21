@@ -103,6 +103,7 @@ const sidebarStyle = theme => ({
     display: "block",
     top: "0",
     left: "0",
+    backgroundColor: "#303647",
     backgroundSize: "cover",
     backgroundPosition: "center center",
     "&:after": {
@@ -111,9 +112,7 @@ const sidebarStyle = theme => ({
       width: "100%",
       height: "100%",
       content: '""',
-      display: "block",
-      background: "#000",
-      opacity: ".8"
+      display: "block"
     }
   },
   list: {
