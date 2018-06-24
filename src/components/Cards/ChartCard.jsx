@@ -80,7 +80,7 @@ ChartCard.propTypes = {
     "rose",
     "gray"
   ]),
-  chartColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
+  chartColor: PropTypes.oneOf(["orange", "green", "turquoise", "blue", "purple","pink","grey"]),
   statLink: PropTypes.object,
   statText: PropTypes.node
 };

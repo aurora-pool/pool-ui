@@ -6,6 +6,7 @@ import {
   defaultFont,
   dangerColor,
   primaryColor,
+  whiteColor,
   primaryBoxShadow
 } from "assets/jss/material-dashboard-react.jsx";
 
@@ -30,7 +31,7 @@ const headerLinksStyle = theme => ({
   linkText: {
     zIndex: "4",
     ...defaultFont,
-    fontSize: "14px"
+    fontSize: "14px",
   },
   buttonLink: {
     [theme.breakpoints.down("sm")]: {
@@ -58,11 +59,12 @@ const headerLinksStyle = theme => ({
     width: "20px",
     height: "20px",
     zIndex: "4",
+    color: whiteColor,
     [theme.breakpoints.down("sm")]: {
       display: "block",
       width: "30px",
       height: "30px",
-      color: "#a9afbb",
+      color: whiteColor,
       marginRight: "15px"
     }
   },

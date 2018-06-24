@@ -65,9 +65,9 @@ class PoolStats extends React.Component {
           <ItemGrid xs={12} sm={6} md={3}>
             <StatsCard
               icon={NetworkCheck}
-              iconColor="orange"
+              iconColor="green"
               title="Pool Hashrate"
-              description={this.props.stats.averageHashrate}
+              description="200"
               small="H"
               statIcon={Warning}
               statIconColor="danger"
@@ -77,9 +77,9 @@ class PoolStats extends React.Component {
           <ItemGrid xs={12} sm={6} md={3}>
             <StatsCard
               icon={Dns}
-              iconColor="green"
+              iconColor="turquoise"
               title="Blocks Found"
-              description={this.props.stats.numBlocksMined}
+              description="123"
               statIcon={DateRange}
               statText="Last 24 Hours"
             />
@@ -87,9 +87,9 @@ class PoolStats extends React.Component {
           <ItemGrid xs={12} sm={6} md={3}>
             <StatsCard
               icon={Mood}
-              iconColor="red"
+              iconColor="blue"
               title="Miners"
-              description={this.props.stats.minersCount}
+              description="765"
               statIcon={LocalOffer}
               statText="Tracked from Github"
             />
@@ -97,9 +97,9 @@ class PoolStats extends React.Component {
           <ItemGrid xs={12} sm={6} md={3}>
             <StatsCard
               icon={Devices}
-              iconColor="blue"
+              iconColor="purple"
               title="Devices"
-              description={this.props.stats.totalClientCounts}
+              description="2367"
               statIcon={Update}
               statText="Just Updated"
             />
@@ -117,7 +117,7 @@ class PoolStats extends React.Component {
                   listener={dailySalesChart.animation}
                 />
               }
-              chartColor="green"
+              chartColor="grey"
               title="Daily Hashrate"
               text={
                 <span>
@@ -146,7 +146,7 @@ class PoolStats extends React.Component {
                   listener={emailsSubscriptionChart.animation}
                 />
               }
-              chartColor="orange"
+              chartColor="grey"
               title="Blocks Found"
               text="per day"
               statIcon={AccessTime}
@@ -162,7 +162,7 @@ class PoolStats extends React.Component {
               cardSubtitle="Miners are ranked based on their current hashrate"
               content={
                 <Table
-                  tableHeaderColor="warning"
+                  tableHeaderColor="white"
                   tableHead={["Address", "Hashrate", "Payouts"]}
                   tableData={[
                     ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "1 mh/s", "140,000 NIM"],

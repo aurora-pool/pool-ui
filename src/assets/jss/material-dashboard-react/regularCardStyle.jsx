@@ -4,13 +4,15 @@
 
 import {
   card,
-  cardHeader,
+  cardHeaderBold,
   defaultFont,
-  orangeCardHeader,
+  turquoiseCardHeader,
   greenCardHeader,
-  redCardHeader,
+  pinkCardHeader,
+  orangeCardHeader,
   blueCardHeader,
-  purpleCardHeader
+  greyCardHeader,
+  purpleCardHeader,
 } from "assets/jss/material-dashboard-react.jsx";
 
 const regularCardStyle = {
@@ -20,24 +22,28 @@ const regularCardStyle = {
     boxShadow: "none"
   },
   cardHeader: {
-    ...cardHeader,
+    maxWidth: "350px",
+    ...cardHeaderBold,
     ...defaultFont
   },
   cardPlainHeader: {
     marginLeft: 0,
     marginRight: 0
   },
-  orangeCardHeader,
+  turquoiseCardHeader,
   greenCardHeader,
-  redCardHeader,
+  pinkCardHeader,
+  orangeCardHeader,
   blueCardHeader,
   purpleCardHeader,
+  greyCardHeader,
   cardTitle: {
     color: "#FFFFFF",
     marginTop: "0",
     marginBottom: "5px",
     ...defaultFont,
-    fontSize: "1.125em"
+    fontSize: "24px",
+    fontWeight: "500"
   },
   cardSubtitle: {
     ...defaultFont,

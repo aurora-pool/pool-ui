@@ -10,12 +10,16 @@ import {
   infoColor,
   roseColor,
   grayColor,
+  whiteColor,
   defaultFont
 } from "assets/jss/material-dashboard-react.jsx";
 
 const tableStyle = theme => ({
   warningTableHeader: {
     color: warningColor
+  },
+  whiteTableHeader: {
+    color: whiteColor
   },
   primaryTableHeader: {
     color: primaryColor
@@ -46,17 +50,19 @@ const tableStyle = theme => ({
   tableHeadCell: {
     color: "inherit",
     ...defaultFont,
-    fontSize: "1em"
+    fontSize: "1em",
+    color: whiteColor
   },
   tableCell: {
     ...defaultFont,
     lineHeight: "1.42857143",
     padding: "12px 8px",
-    verticalAlign: "middle"
+    verticalAlign: "middle",
+    color: whiteColor
   },
   tableResponsive: {
     width: "100%",
-    marginTop: theme.spacing.unit * 3,
+    marginTop: "0px",
     overflowX: "auto"
   }
 });

@@ -46,24 +46,6 @@ function StatsCard({ ...props }) {
           ) : null}
         </Typography>
       </CardContent>
-      <CardActions className={classes.cardActions}>
-        <div className={classes.cardStats}>
-          <props.statIcon
-            className={
-              classes.cardStatsIcon +
-              " " +
-              classes[statIconColor + "CardStatsIcon"]
-            }
-          />{" "}
-          {statLink !== undefined ? (
-            <a href={statLink.href} className={classes.cardStatsLink}>
-              {statLink.text}
-            </a>
-          ) : statText !== undefined ? (
-            statText
-          ) : null}
-        </div>
-      </CardActions>
     </Card>
   );
 }
@@ -76,7 +58,7 @@ StatsCard.defaultProps = {
 StatsCard.propTypes = {
   classes: PropTypes.object.isRequired,
   icon: PropTypes.func.isRequired,
-  iconColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
+  iconColor: PropTypes.oneOf(["orange", "green", "turquoise", "blue", "purple","pink","grey"]),
   title: PropTypes.node,
   description: PropTypes.node,
   small: PropTypes.node,

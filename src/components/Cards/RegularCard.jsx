@@ -57,7 +57,7 @@ RegularCard.defaultProps = {
 RegularCard.propTypes = {
   plainCard: PropTypes.bool,
   classes: PropTypes.object.isRequired,
-  headerColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
+  headerColor: PropTypes.oneOf(["orange", "green", "turquoise", "blue", "purple","pink","grey"]),
   cardTitle: PropTypes.node,
   cardSubtitle: PropTypes.node,
   content: PropTypes.node,
