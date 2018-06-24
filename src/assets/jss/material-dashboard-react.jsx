@@ -109,7 +109,7 @@ const turquoiseCardHeader = {
 };
 const blueCardHeader = {
   background: "linear-gradient(60deg, #0D73DC , #00A7FF)",
-    ...blueBoxShadow
+  ...blueBoxShadow
 };
 const pinkCardHeader = {
   background: "linear-gradient(60deg, #D00077, #FF0197)",

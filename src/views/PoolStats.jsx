@@ -67,7 +67,7 @@ class PoolStats extends React.Component {
               icon={NetworkCheck}
               iconColor="green"
               title="Pool Hashrate"
-              description="200"
+              description={this.props.stats.averageHashrate}
               small="H"
               statIcon={Warning}
               statIconColor="danger"
@@ -79,7 +79,7 @@ class PoolStats extends React.Component {
               icon={Dns}
               iconColor="turquoise"
               title="Blocks Found"
-              description="123"
+              description={this.props.stats.numBlocksMined}
               statIcon={DateRange}
               statText="Last 24 Hours"
             />
@@ -89,7 +89,7 @@ class PoolStats extends React.Component {
               icon={Mood}
               iconColor="blue"
               title="Miners"
-              description="765"
+              description={this.props.stats.minersCount}
               statIcon={LocalOffer}
               statText="Tracked from Github"
             />
@@ -99,7 +99,7 @@ class PoolStats extends React.Component {
               icon={Devices}
               iconColor="purple"
               title="Devices"
-              description="2367"
+              description={this.props.stats.totalClientCounts}
               statIcon={Update}
               statText="Just Updated"
             />

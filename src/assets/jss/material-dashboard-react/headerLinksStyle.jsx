@@ -31,7 +31,7 @@ const headerLinksStyle = theme => ({
   linkText: {
     zIndex: "4",
     ...defaultFont,
-    fontSize: "14px",
+    fontSize: "14px"
   },
   buttonLink: {
     [theme.breakpoints.down("sm")]: {
