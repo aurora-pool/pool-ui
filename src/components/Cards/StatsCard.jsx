@@ -19,7 +19,6 @@ function StatsCard({ ...props }) {
     statLink,
     small,
     statText,
-    statIconColor,
     iconColor
   } = props;
   return (
@@ -52,7 +51,6 @@ function StatsCard({ ...props }) {
 
 StatsCard.defaultProps = {
   iconColor: "purple",
-  statIconColor: "gray"
 };
 
 StatsCard.propTypes = {
@@ -62,16 +60,6 @@ StatsCard.propTypes = {
   title: PropTypes.node,
   description: PropTypes.node,
   small: PropTypes.node,
-  statIcon: PropTypes.func.isRequired,
-  statIconColor: PropTypes.oneOf([
-    "warning",
-    "primary",
-    "danger",
-    "success",
-    "info",
-    "rose",
-    "gray"
-  ]),
   statLink: PropTypes.object,
   statText: PropTypes.node
 };
