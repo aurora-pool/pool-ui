@@ -20,7 +20,7 @@
 }
 
 .ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
-    stroke: rgba(255, 255, 255, 0.8);
+    stroke: #00FFB8;
 }
 
 .ct-label.ct-horizontal.ct-end {
@@ -71,22 +71,26 @@ blockquote footer:before, blockquote small:before {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 28px;
     line-height: 1.15em;
+    color: white;
 }
 
 h2 {
-    font-size: 2.4em;
+    font-size: 28px;
+    color: white;
+    font-weight: 700px;
 }
 
 h3 {
-    font-size: 1.825em;
+    font-size: 20px;
     line-height: 1.4em;
     margin: 20px 0 10px;
 }
 
 h4 {
-    font-size: 1.3em;
+    font-size: 20px;
+    font-weight: 600;
     line-height: 1.4em;
 }
 
@@ -118,12 +122,12 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #9c27b0;
+    color: #00FFBB;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #89229b;
+    color: #3C4858;
     text-decoration: none;
 }
 

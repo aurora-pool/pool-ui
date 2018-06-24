@@ -19,7 +19,6 @@ import { withStyles, Grid } from "material-ui";
 import {
   StatsCard,
   ChartCard,
-  TasksCard,
   RegularCard,
   Table,
   ItemGrid
@@ -28,7 +27,6 @@ import {
 import {
   dailySalesChart,
   emailsSubscriptionChart,
-  completedTasksChart
 } from "variables/charts";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/dashboardStyle";
@@ -60,9 +58,6 @@ class GlobalStats extends React.Component {
               title="Global Hashrate"
               description={this.props.stats.estimated_global_hashrate}
               small="H"
-              statIcon={Warning}
-              statIconColor="danger"
-              statLink={{ text: "Get More Space...", href: "#pablo" }}
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
@@ -71,8 +66,6 @@ class GlobalStats extends React.Component {
               iconColor="green"
               title="Current Supply"
               description={this.props.stats.current_supply}
-              statIcon={DateRange}
-              statText="Last 24 Hours"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
@@ -81,8 +74,6 @@ class GlobalStats extends React.Component {
               iconColor="red"
               title="Block Reward"
               description={this.props.stats.block_reward}
-              statIcon={LocalOffer}
-              statText="Tracked from Github"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
@@ -91,8 +82,6 @@ class GlobalStats extends React.Component {
               iconColor="blue"
               title="Max Supply"
               description={this.props.stats.maximum_supply}
-              statIcon={Update}
-              statText="Just Updated"
             />
           </ItemGrid>
         </Grid>
@@ -142,27 +131,6 @@ class GlobalStats extends React.Component {
               text="per day"
               statIcon={AccessTime}
               statText="last block found 1 hour ago"
-            />
-          </ItemGrid>
-        </Grid>
-        <Grid container>
-          <ItemGrid xs={12} sm={12} md={12}>
-            <RegularCard
-              headerColor="purple"
-              cardTitle="TOP miners"
-              cardSubtitle="Miners are ranked based on their current hashrate"
-              content={
-                <Table
-                  tableHeaderColor="warning"
-                  tableHead={["Address", "Hashrate", "Payouts"]}
-                  tableData={[
-                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "1 mh/s", "140,000 NIM"],
-                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "540 kh/s", "140,000 NIM"],
-                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "178 kh/s", "120,000 NIM"],
-                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "39 kh/s", "10,000 NIM"]
-                  ]}
-                />
-              }
             />
           </ItemGrid>
         </Grid>

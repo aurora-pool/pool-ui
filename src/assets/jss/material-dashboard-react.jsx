@@ -53,7 +53,9 @@ const defaultFont = {
   lineHeight: "1.5em"
 };
 
-const primaryColor = "#9c27b0";
+const darkGreyColor = "#444D66";
+const whiteColor = "#ffffff";
+const primaryColor = "#00FFBB";
 const warningColor = "#ff9800";
 const dangerColor = "#f44336";
 const successColor = "#4caf50";
@@ -63,7 +65,19 @@ const grayColor = "#999999";
 
 const primaryBoxShadow = {
   boxShadow:
-    "0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2)"
+    "0 12px 20px -10px rgba(0,255,187, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0,255,187, 0.2)"
+};
+const blueBoxShadow = {
+  boxShadow:
+    "0 12px 20px -10px rgba(13,115,220, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(13,115,220, 0.2)"
+};
+const turquoiseBoxShadow = {
+  boxShadow:
+    "0 12px 20px -10px rgba(0,186,182, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0,186,182, 0.2)"
+};
+const purpleBoxShadow = {
+  boxShadow:
+    "0 12px 20px -10px rgba(109,5,202, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(109,5,202, 0.2)"
 };
 const infoBoxShadow = {
   boxShadow:
@@ -71,7 +85,7 @@ const infoBoxShadow = {
 };
 const successBoxShadow = {
   boxShadow:
-    "0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2)"
+    "0 12px 20px -10px rgba(0,255,187, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0,255,187, 0.2)"
 };
 const warningBoxShadow = {
   boxShadow:
@@ -83,26 +97,30 @@ const dangerBoxShadow = {
 };
 
 const orangeCardHeader = {
-  background: "linear-gradient(60deg, #ffa726, #fb8c00)",
-  ...warningBoxShadow
+  background: "linear-gradient(60deg, #FF8A48, #FFD100)",
 };
 const greenCardHeader = {
-  background: "linear-gradient(60deg, #66bb6a, #43a047)",
-  ...successBoxShadow
-};
-const redCardHeader = {
-  background: "linear-gradient(60deg, #ef5350, #e53935)",
-  ...dangerBoxShadow
-};
-const blueCardHeader = {
-  background: "linear-gradient(60deg, #26c6da, #00acc1)",
-  ...infoBoxShadow
-};
-const purpleCardHeader = {
-  background: "linear-gradient(60deg, #ab47bc, #8e24aa)",
+  background: "linear-gradient(60deg, #00E981, #00FFBB)",
   ...primaryBoxShadow
 };
-
+const turquoiseCardHeader = {
+  background: "linear-gradient(60deg, #00BAB6, #07fffa)",
+  ...turquoiseBoxShadow
+};
+const blueCardHeader = {
+  background: "linear-gradient(60deg, #0D73DC , #00A7FF)",
+  ...blueBoxShadow
+};
+const pinkCardHeader = {
+  background: "linear-gradient(60deg, #D00077, #FF0197)",
+};
+const purpleCardHeader = {
+  background: "linear-gradient(60deg, #6D05CA, #AB16F5)",
+  ...purpleBoxShadow
+};
+const greyCardHeader={
+  background: "#3A4056"
+}
 const cardActions = {
   margin: "0 20px 10px",
   paddingTop: "10px",
@@ -110,11 +128,21 @@ const cardActions = {
   height: "auto",
   ...defaultFont
 };
+const cardHeaderNoMargin = {
+  margin: "15px 15px 0",
+  borderRadius: "3px",
+  padding: "15px"
+};
 
-const cardHeader = {
+const cardHeaderBold= {
   margin: "-20px 15px 0",
   borderRadius: "3px",
   padding: "15px"
+};
+const cardHeader = {
+  margin: "-20px 15px 0",
+  borderRadius: "3px",
+  padding: "4px"
 };
 
 const defaultBoxShadow = {
@@ -141,17 +169,26 @@ export {
   infoColor,
   roseColor,
   grayColor,
+  whiteColor,
+  darkGreyColor,
   primaryBoxShadow,
   infoBoxShadow,
   successBoxShadow,
   warningBoxShadow,
   dangerBoxShadow,
+  purpleBoxShadow,
+  blueBoxShadow,
+  turquoiseBoxShadow,
   orangeCardHeader,
+  turquoiseCardHeader,
   greenCardHeader,
-  redCardHeader,
+  pinkCardHeader,
   blueCardHeader,
   purpleCardHeader,
+  greyCardHeader,
   cardActions,
   cardHeader,
+  cardHeaderNoMargin,
+  cardHeaderBold,
   defaultBoxShadow
 };

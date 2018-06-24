@@ -12,6 +12,7 @@ import {
   infoColor,
   successColor,
   warningColor,
+  darkGreyColor,
   dangerColor
 } from "assets/jss/material-dashboard-react.jsx";
 
@@ -164,6 +165,12 @@ const sidebarStyle = theme => ({
     "&:hover": {
       backgroundColor: primaryColor,
       ...primaryBoxShadow
+    }
+  },
+  grey: {
+    backgroundColor: darkGreyColor,
+    "&:hover": {
+      backgroundColor: darkGreyColor,
     }
   },
   blue: {

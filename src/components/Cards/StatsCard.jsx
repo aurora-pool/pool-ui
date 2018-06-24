@@ -19,7 +19,6 @@ function StatsCard({ ...props }) {
     statLink,
     small,
     statText,
-    statIconColor,
     iconColor
   } = props;
   return (
@@ -46,50 +45,21 @@ function StatsCard({ ...props }) {
           ) : null}
         </Typography>
       </CardContent>
-      <CardActions className={classes.cardActions}>
-        <div className={classes.cardStats}>
-          <props.statIcon
-            className={
-              classes.cardStatsIcon +
-              " " +
-              classes[statIconColor + "CardStatsIcon"]
-            }
-          />{" "}
-          {statLink !== undefined ? (
-            <a href={statLink.href} className={classes.cardStatsLink}>
-              {statLink.text}
-            </a>
-          ) : statText !== undefined ? (
-            statText
-          ) : null}
-        </div>
-      </CardActions>
     </Card>
   );
 }
 
 StatsCard.defaultProps = {
   iconColor: "purple",
-  statIconColor: "gray"
 };
 
 StatsCard.propTypes = {
   classes: PropTypes.object.isRequired,
   icon: PropTypes.func.isRequired,
-  iconColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
+  iconColor: PropTypes.oneOf(["orange", "green", "turquoise", "blue", "purple","pink","grey"]),
   title: PropTypes.node,
   description: PropTypes.node,
   small: PropTypes.node,
-  statIcon: PropTypes.func.isRequired,
-  statIconColor: PropTypes.oneOf([
-    "warning",
-    "primary",
-    "danger",
-    "success",
-    "info",
-    "rose",
-    "gray"
-  ]),
   statLink: PropTypes.object,
   statText: PropTypes.node
 };

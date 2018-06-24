@@ -4,13 +4,15 @@
 
 import {
   card,
-  cardHeader,
+  cardHeaderNoMargin,
   defaultFont,
-  orangeCardHeader,
+  turquoiseCardHeader,
   greenCardHeader,
-  redCardHeader,
+  pinkCardHeader,
+  orangeCardHeader,
   blueCardHeader,
   purpleCardHeader,
+  greyCardHeader,
   cardActions,
   grayColor,
   warningColor,
@@ -24,28 +26,33 @@ import {
 const chartCardStyle = {
   card,
   cardHeader: {
-    ...cardHeader,
+    ...cardHeaderNoMargin,
     padding: "0",
     minHeight: "160px",
     ...defaultFont
   },
-  orangeCardHeader,
+  grayColor,
+  turquoiseCardHeader,
   greenCardHeader,
-  redCardHeader,
+  pinkCardHeader,
+  orangeCardHeader,
   blueCardHeader,
   purpleCardHeader,
+  greyCardHeader,
   cardContent: {
     padding: "15px 20px"
   },
   cardTitle: {
     marginTop: "0",
     marginBottom: "5px",
+    color: "white",
     ...defaultFont,
-    fontSize: "1.175em"
+    fontSize: "24px",
+    fontWeight: "500"
   },
   cardCategory: {
     marginBottom: "0",
-    color: grayColor,
+    color: "white",
     ...defaultFont,
     fontSize: "0.9em"
   },

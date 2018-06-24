@@ -6,11 +6,13 @@ import {
   card,
   cardHeader,
   defaultFont,
-  orangeCardHeader,
+  turquoiseCardHeader,
   greenCardHeader,
-  redCardHeader,
+  pinkCardHeader,
+  orangeCardHeader,
   blueCardHeader,
   purpleCardHeader,
+  greyCardHeader,
   cardActions,
   grayColor,
   warningColor,
@@ -28,12 +30,14 @@ const statsCardStyle = {
     float: "left",
     textAlign: "center"
   },
-  orangeCardHeader,
+  turquoiseCardHeader,
   greenCardHeader,
-  redCardHeader,
+  pinkCardHeader,
+  orangeCardHeader,
   blueCardHeader,
   purpleCardHeader,
   cardContent: {
+    color: "white",
     textAlign: "right",
     paddingTop: "10px",
     padding: "15px 20px"
@@ -54,14 +58,16 @@ const statsCardStyle = {
   },
   cardTitle: {
     margin: "0",
+    color: "white",
     ...defaultFont,
-    fontSize: "1.625em"
+    fontSize: "28px",
+    fontWeight: "500"
   },
   cardTitleSmall: {
     fontSize: "65%",
     fontWeight: "400",
     lineHeight: "1",
-    color: "#777"
+    color: "rgba(255, 255, 255, 0.8)"
   },
   cardActions: {
     ...cardActions,
