@@ -20,7 +20,8 @@ class App extends React.Component {
     mobileOpen: false,
     stats: {
       "global:stats": {},
-      "pool:stats": {}
+      "pool:stats": {},
+      miners: []
     }
   };
 
@@ -53,9 +54,22 @@ class App extends React.Component {
       const ps = new PerfectScrollbar(this.refs.mainPanel);
     }
   }
+
   componentDidUpdate() {
     this.refs.mainPanel.scrollTop = 0;
   }
+
+  // TO DO: Extract into a class formatter object
+  formatMinersStats(stats) {
+    if (!stats) {
+      return []
+    } else {
+      return stats.map((el) => {
+        return [el, "0"]
+      })
+    }
+  }
+
   render() {
     const switchRoutes = (
       <Switch>
@@ -63,9 +77,11 @@ class App extends React.Component {
           if (prop.redirect)
             return <Redirect from={prop.path} to={prop.to} key={key} />;
 
+          const minerStats = this.formatMinersStats(this.state.stats["pool:stats:miners"]);
           const element = React.createElement(prop.component, {
             key: key,
-            stats: this.state.stats[prop.statsType]
+            stats: this.state.stats[prop.statsType],
+            miners: minerStats
           })
 
           const routerRender = () => element

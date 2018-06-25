@@ -149,13 +149,8 @@ class PoolStats extends React.Component {
               content={
                 <Table
                   tableHeaderColor="white"
-                  tableHead={["Address", "Hashrate", "Payouts"]}
-                  tableData={[
-                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "1 mh/s", "140,000 NIM"],
-                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "540 kh/s", "140,000 NIM"],
-                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "178 kh/s", "120,000 NIM"],
-                    ["NQ49 EDPF FSLR 2FMR 596R R7R7 LQH9 3YDH NN7M", "39 kh/s", "10,000 NIM"]
-                  ]}
+                  tableHead={["Address", "Hashrate"]}
+                  tableData={this.props.miners}
                 />
               }
             />
